@@ -1,0 +1,116 @@
+\documentclass[10pt,a4paper,sans]{moderncv}%sans(serif)/roman
+\moderncvtheme[blue]{classic} %blue orange red gray green
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}
+\usepackage[margin={0.6in,0.5in}]{geometry} %si limite en place
+\addtolength{\textheight}{4cm}
+\AtBeginDocument{\recomputelengths}
+
+
+%----------------------------------------------------------------------------------
+%            Commandes perso
+%----------------------------------------------------------------------------------
+\renewcommand*{\cvlanguage}[4]{%
+  \cvdoubleitem{\textbf{#1}}{\small#2}{\textbf{#3}}{\small#4}}
+
+%----------------------------------------------------------------------------------
+%            Photo et infos persos
+%----------------------------------------------------------------------------------
+\firstname{Victor}
+\familyname{Cameo Ponz}
+%\title{Élève ingénieur à l'INSA \newline \mbox{Génie Mathématique}}
+\title{Ingénieur INSA, \newline \mbox{Génie Mathématique}}
+\address{47 rue Guynemer}{31200 Toulouse}
+\mobile{+33 (0)6 74 08 96 90}
+\email{victor.cameo\_ponz@insa-rouen.fr}
+\extrainfo{Titulaire du permis B, 23 ans}
+%\photo[60pt]{./photo/victorID.JPG}
+%\quote{Ingénieur d'étude en optimisation et recherche opérationnelle, disponible immédiatement.}
+
+%----------------------------------------------------------------------------------
+%            contenu du cv
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace{-0,9cm}
+\section{Formation scientifique}
+\cventry{2008 -- 2013}{Diplome d'ingénieur}{Institut National des Sciences Appliquées (INSA)}{Rouen (76)}{}{Département Génie Mathématique.}
+\cventry{Juin 2008}{Baccalauréat Scientifique}{Lycée Pierre de Fermat}{Toulouse (31)}{}{Spécialité physique chimie, mention bien.}
+\section{Expérience professionnelle}
+\cventry{2013}{EADS Astrium Central Engineering}{}{Toulouse (31)}{}{Optimisation de \textbf{l'allocation fréquentielle} d'un \textbf{satellite multi-beam}. Retro-engineering et amélioration d'un solveur CHOCO. \textbf{Conception et réalisation d'un solveur} recuit simulé. Interface graphique : JFreeChart, World Wind Java et Excel. \textit{Utilisation  de GIT, Java, Eclipse, TPTP et VBA.} Stage ingénieur, 6 mois.}
+\cventry{2011 -- 2012}{Professeur particulier}{}{Rouen (76)}{}{Cours particuliers de mathématiques.}
+\cventry{2011}{Universidade Federal de Uberlandia}{}{Uberlandia - MG, Brésil}{}{Comparaison de \textbf{réseaux de neurones artificiels} et application à la \textbf{réalité augmentée} pour la simulation de prothèses de membres supérieurs (bras/mains). \textit{C++ et Python}. Stage technicien, 3 mois.}
+\cventry{2010}{Technicien informatique}{Direction de l'informatique et des télécommunications du Conseil Général de la Haute Garonne}{Toulouse (31)}{}{Tri et enrichissement de la base de données du Conseil Général. 1 mois.}
+%\cventry{Juillet 2009}{Stage ouvrier}{Les Fromageries Occitanes}{Villefranche de Lauragais (31)}{}{Travail en équipe sur une chaîne de découpe et conditionnement de fromage.}
+%\cventry{2007 -- 2008}{Professeur d'Aïkido}{Aïkido Club des Mazades}{Toulouse (31)}{}{Enseignement de l'Aïkido à des enfants de 7 à 12 ans. 1h30 par semaine.}
+
+\section{Compétences}
+\subsection{Mathématiques appliquées}
+\cvline{Recherche opérationnelle}{
+%Probabilités et statistiques,
+%processus de Markov,
+Optimisation,
+%optimisation combinatoire et convexe,
+%optimisation dans les réseaux,
+algorithmique avancée et parallélisation,
+%programmation logique par contrainte,
+théorie du signal,
+%contrôle optimal,
+automatique.}
+\cvline{Calcul scientifique}{
+Calcul différentiel,
+éléments finis,
+%méthode des éléments finis,
+calcul spectral,
+%équations aux dérivées partielles,
+analyse numérique.
+%algorithmique numérique et arithmétique.
+}
+\cvline{Projets}{
+\textbf{2012 -- 2013} : Conception de réseaux hiérarchiques, \textbf{programmation linéaire en nombres entiers}, optimisation dans les graphes.  \textit{Utilisation de CPLEX (IBM), Porta, Python}.\newline
+\textbf{2012} : Étude de la parallélisation d'un algorithme d'\textbf{optimisation par essaim} (PSO).\newline
+%\textbf{2011} : Conception et programmation d'un jeu de go en Java suivant le modèle MVC. \textit{Eclipse, Topcased}.\newline
+\textbf{2011} : Programmation orienté objet d'un ensemble de jeux de cartes. \textit{C++, SVN}.\newline
+\textbf{2011} : \textbf{Segmentation d'image}, algorithmes de partitionnement de graphe. \textit{Kernighan et Lin, Karger et Stoer-Wagner}.\newline
+\textbf{2009} : \textbf{Modélisation} de la propagation d'un virus dans une population. \textit{Scilab.}}{}{}
+\subsection{Informatique}
+\cvcomputer{Programmation}{
+Java,
+C/C++,
+UML,
+Python,
+\newline
+Fortran,
+script shell,
+%Prolog (CHIP),
+%Pascal,
+Perl.
+} {OS et logiciels}{
+GNU Linux,
+Mac OSX,
+Windows,
+\newline
+Matlab,
+ExtendSim,
+%OpenMP,
+%\LaTeX,
+MS Office.}
+\cvcomputer{Web}{HTML/CSS, PHP, javascript.} {SGBD}{MySQL, PostgrSQL.}
+\subsection{Langues}
+\cvlanguage{Anglais}{Courant, score au TOEIC 935 sur 990.}{Espagnol}{Compréhension écrite et orale.}
+\cvlanguage{Portugais}{Conversation et compréhension écrite.}{Allemand}{Compréhension écrite et orale.}
+
+\section{Centres d'intérêt}
+\cvline{Sport}{
+Pratique de l'escalade% en falaise et en salle
+, de l'Aïkido (1er dan et enseignement à des enfants)%
+, régates de voile en équipage.%(participation à la course croisière EDHEC en 2012)
+}{}
+\cvline{Vie associative}{
+%Deux années de
+Jonglage et théâtre étude à l'INSA. Participation dans une pièce en anglais, \textit{Still Kidin' (Univ. de Rouen)}.\newline
+%Apprentissage et enseignement du
+%Jonglage dans le club associatif de l'INSA Rouen (76).
+}{}
+
+\end{document}
