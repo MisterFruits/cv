@@ -13,6 +13,17 @@
 \renewcommand*{\cvlanguage}[4]{%
   \cvdoubleitem{\textbf{#1}}{\small#2}{\textbf{#3}}{\small#4}}
 
+% usage: \cventry{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
+\renewcommand*{\cventry}[6]{%
+  \cvline{#1}{%
+    {\bfseries#2}%
+    \ifx#3\else{, {#3}}\fi%
+    \ifx#4\else{, #4}\fi%
+    \ifx#5\else{, \small#5}\fi%
+    .%
+    \ifx#6\else{\newline{}\begin{minipage}[t]{\linewidth}\small#6\end{minipage}}\fi
+    }}%
+
 %----------------------------------------------------------------------------------
 %            Photo et infos persos
 %----------------------------------------------------------------------------------
