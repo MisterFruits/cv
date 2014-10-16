@@ -16,8 +16,6 @@ def configure(conf):
 def build(bld):
     for filename in listfiles(srcdir, TEX_FILE_MATCHER):
         pdflatex(bld, '%s/%s' % (srcdir, filename))
-    # print(listfiles(srcdir, TEX_FILE_MATCHER))
-    # pdflatex(bld, '%s/%s' % (srcdir, "cv_victor.tex"))
 
 def pdflatex(bld, src):
     bld(
