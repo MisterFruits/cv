@@ -1,3 +1,4 @@
+from waflib import Logs
 from os import listdir
 import re
 
@@ -6,6 +7,13 @@ outdir = '%s/target' % topdir
 srcdir = '%s/src' % topdir
 
 TEX_FILE_MATCHER = re.compile(r'.*\.tex$')
+PDF_FILE_MATCHER = re.compile(r'.*\.pdf$')
+
+def Colorpicker():
+    notcolors = ['USE', 'cursor_on', 'cursor_off', 'NORMAL', 'BOLD']
+    for color in Logs.colors_lst:
+        if color not in notcolors:
+            yield color
 
 
 def configure(conf):
@@ -14,10 +22,13 @@ def configure(conf):
         conf.fatal('The program LaTex is required')
 
 def build(bld):
+    colorpicker = Colorpicker()
     for filename in listfiles(srcdir, TEX_FILE_MATCHER):
-        pdflatex(bld, '%s/%s' % (srcdir, filename))
+        pdflatex(bld, '%s/%s' % (srcdir, filename), color=next(colorpicker),
+            name=filename)
 
-def pdflatex(bld, src):
+def pdflatex(bld, src, color='NORMAL', name='pdflatex'):
+    Logs.pprint(color, 'Compiling %s' % name)
     bld(
         features = 'tex',
         type     = 'pdflatex', # pdflatex or xelatex
@@ -25,7 +36,12 @@ def pdflatex(bld, src):
         outs     = 'pdf', # 'pdf' or 'ps pdf'
         # deps     = 'crossreferencing.lst', # to give dependencies directly
         prompt   = 0, # 0 for the batch mode, 1 otherwise
+        color=color,
+        name=name
         )
+
+def open(ctx):
+    pdffiles = listdir(outdir, PDF_FILE_MATCHER)
 
 def listfiles(dir, matcher=re.compile(r'.*')):
     return [filename for filename in listdir(dir) if matcher.match(filename)]
