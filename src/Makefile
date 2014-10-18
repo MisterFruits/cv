@@ -29,8 +29,8 @@ all: cv_victor.pdf
 # -interactive=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
-cv_victor.pdf: cv_victor.tex
-	latexmk -pdf -pdflatex="pdflatex -interactive=batchmode -halt-on-error" -use-make cv_victor.tex
+%.pdf: %.tex
+	latexmk -pdf -pdflatex="pdflatex -interactive=batchmode -halt-on-error" -use-make $<
 
 clean:
 	latexmk -CA
