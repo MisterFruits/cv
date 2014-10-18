@@ -23,6 +23,10 @@ def Colorpicker():
         if color not in notcolors:
             yield color
 
+def options(ctx):
+    ctx.add_option('-d', '--debug',
+        action='store_true', default=False,
+        help='Outputs pdf errors while compiling')
 
 def configure(conf):
     conf.load('tex')
@@ -43,7 +47,7 @@ def pdflatex(bld, src, color='NORMAL', name='pdflatex'):
         source   = src,  # mandatory, the source
         outs     = 'pdf', # 'pdf' or 'ps pdf'
         # deps     = 'crossreferencing.lst', # to give dependencies directly
-        prompt   = 0, # 0 for the batch mode, 1 otherwise
+        prompt   = 1 if bld.options.debug else 0, # 0 for the batch mode, 1 otherwise
         color=color,
         name=name
         )
