@@ -11,6 +11,14 @@ PDF_FILE_MATCHER = re.compile(r'.*\.pdf$')
 
 def Colorpicker():
     notcolors = ['USE', 'cursor_on', 'cursor_off', 'NORMAL', 'BOLD']
+    colors = [c for c in Logs.colors_lst if c not in notcolors]
+    i = 0
+    while True:
+        if i == len(colors):
+            i = 0
+        yield colors[i]
+        i += 1
+
     for color in Logs.colors_lst:
         if color not in notcolors:
             yield color
