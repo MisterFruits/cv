@@ -19,10 +19,6 @@ def Colorpicker():
         yield colors[i]
         i += 1
 
-    for color in Logs.colors_lst:
-        if color not in notcolors:
-            yield color
-
 def options(ctx):
     ctx.add_option('-d', '--debug',
         action='store_true', default=False,
