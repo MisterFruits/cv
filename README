@@ -1,0 +1,8 @@
+This repo includes latex dev for jobs applications (cv & movitation letters)
+
+Tools required :
+ * waf - https://code.google.com/p/waf/ - to build the project
+ * moderncv as latex package (for cv rendering)
+
+Run ‘waf configure build‘ to build all latex files
+
