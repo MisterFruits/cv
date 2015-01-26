@@ -1,8 +1,10 @@
 from waflib import Logs
-from os import listdir
+import os
+import shutil
 import re
 
 topdir = '.'
+bdldir = '%s/build/src' %topdir
 outdir = '%s/target' % topdir
 srcdir = '%s/src' % topdir
 
@@ -32,7 +34,7 @@ def configure(conf):
 def build(bld):
     colorpicker = Colorpicker()
     for filename in listfiles(srcdir, TEX_FILE_MATCHER):
-        pdflatex(bld, '%s/%s' % (srcdir, filename), color=next(colorpicker),
+        pdflatex(bld, os.path.join(srcdir, filename), color=next(colorpicker),
             name=filename)
 
 def pdflatex(bld, src, color='NORMAL', name='pdflatex'):
@@ -48,8 +50,11 @@ def pdflatex(bld, src, color='NORMAL', name='pdflatex'):
         name=name
         )
 
-def open(ctx):
-    pdffiles = listdir(outdir, PDF_FILE_MATCHER)
+def package(ctx):
+    os.makedirs(outdir)
+    for filename in listfiles(bdldir, PDF_FILE_MATCHER):
+        shutil.copy(os.path.join(bdldir, filename),
+                    os.path.join(outdir, filename))
 
 def listfiles(dir, matcher=re.compile(r'.*')):
-    return [filename for filename in listdir(dir) if matcher.match(filename)]
+    return [filename for filename in os.listdir(dir) if matcher.match(filename)]
