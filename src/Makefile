@@ -1,11 +1,6 @@
-# You want latexmk to *always* run, because make does not have all the info.
-# Also, include non-file targets in .PHONY so they are run regardless of any
-# file of the given name existing.
-.PHONY: cv_victor.pdf all clean
-
 # The first rule in a Makefile is the one executed by default ("make"). It
 # should always be the "all" rule, so that "make" and "make all" are identical.
-all: cv_victor.pdf
+all: cv_fr.pdf cv_pt.pdf
 
 # CUSTOM BUILD RULES
 
@@ -31,6 +26,11 @@ all: cv_victor.pdf
 
 %.pdf: %.tex
 	latexmk -pdf -pdflatex="pdflatex -interactive=batchmode -halt-on-error" -use-make $<
+
+# You want latexmk to *always* run, because make does not have all the info.
+# Also, include non-file targets in .PHONY so they are run regardless of any
+# file of the given name existing.
+.PHONY: cv_pt.pdf cv_fr.pdf all clean
 
 clean:
 	latexmk -CA
