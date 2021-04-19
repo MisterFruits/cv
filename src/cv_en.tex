@@ -1,0 +1,229 @@
+\documentclass[10pt,a4paper,sans]{moderncv}%sans(serif)/roman
+\moderncvtheme[blue]{classic} %blue orange red gray green
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}
+%\usepackage[margin={0.6in,0.5in}]{geometry} %si limite en place
+\addtolength{\textheight}{4cm}
+\AtBeginDocument{\recomputelengths}
+
+
+%----------------------------------------------------------------------------------
+%            Commandes perso
+%----------------------------------------------------------------------------------
+\renewcommand*{\cvlanguage}[4]{%
+  \cvdoubleitem{\textbf{#1}}{\small#2}{\textbf{#3}}{\small#4}}
+
+% usage: \cventry{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
+\renewcommand*{\cventry}[6]{%
+  \cvline{#1}{%
+    {\bfseries#2}%
+    \ifx#3\else{, {#3}}\fi%
+    \ifx#4\else{, \small#4}\fi%
+    \ifx#5\else{, \small#5}\fi%
+    .%
+    \ifx#6\else{\newline{}\begin{minipage}[t]{\linewidth}\small#6\end{minipage}}\fi
+    }}%
+
+%----------------------------------------------------------------------------------
+%            Photo et infos persos
+%----------------------------------------------------------------------------------
+\firstname{Victor}
+\familyname{Cameo Ponz}
+\title{HPC and software engineer}
+\address{3 rue Tour Gayraud}{34070 Montpellier}
+\mobile{+33 06 74 08 96 90}
+\email{vicameo@free.fr}
+\extrainfo{31 year old | French}
+%\photo[60pt]{./photo/victorID.JPG}
+%\quote{Ingénieur d'étude en optimisation et recherche opérationnelle, disponible immédiatement.}
+
+%----------------------------------------------------------------------------------
+%            contenu du cv
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace{-1cm} %si limite en place
+
+\section{Experience}
+\cventry{2021}
+    {High Performance Computing (HPC) engineer}
+    {CINES}
+    {Montpellier, France}
+    {4 months}
+    {
+        \begin{itemize}
+            \item Spack (GAIA)
+            \item Python dev HPC Datas (energy,)(tagada)
+            \item HLST
+        \end{itemize}
+    }
+
+\cventry{2015 - 2018}
+    {High Performance Computing (HPC) engineer}
+    {CINES}
+    {Montpellier, France}
+    {3 years}
+    {
+        \begin{itemize}
+            \item Conception of a pipeline for installing software on a higth performance computer using the \textbf{package manager EasyBuild}.
+            \item \textbf{Project leader} benchmarking the "Unified European Application Benchmark Suite (UEABS - PRACE)" with   \textbf{Intel Xeon Phi, NVIDIA GPU e Maxeler FPGA} technnologies -- 10 people.
+%            \item Software deployment, benchmark and support no supercomputador do CINES Occigen: 90 000 cores, \#3 França, \#26 mondial.
+            \item \textbf{Trainer} for software debugging and the "git" versionning system.
+        \end{itemize}
+    }
+\cventry{2013 -- 2015}
+    {Software engineer for satellites operation products }
+    {AKKA for Airbus}
+    {Toulouse, França}
+    {2 years}
+    {
+        Development and industrialisation of a telecommunication satellite payload configuration software
+        \begin{itemize}
+            \item C++ optimisation kernel.
+            \item Operational procedure generation.
+            \item Control center integration.
+        \end{itemize}
+    }
+\cventry{2013}
+    {Satellite design and optimisation software trainee}
+    {Airbus Defence and Space}
+    {Toulouse, France}
+    {6 months}
+    {
+        Frequency allocation optimisation of a multi-beam satellite:
+        \begin{itemize}
+            \item Retro-engineering and improvement of constraint programmed kernel
+            \item Design and development of a simulated annealing solver
+            \item Development of visual tools
+        \end{itemize}
+    }
+\cventry{2011}
+    {Applied mathematic and biomedicine trainee}
+    {Federal University of Uberlandia}
+    {MG, Brazil}
+    {3 meses}
+    {Comparison of neural networks applied to Augmented Reality for upper limb simulation. Python and C++}
+
+
+\section{Skills}
+\cvcomputer{Software developpement}{
+    Python,
+    C/C++,
+    Java,
+    % script shell,
+    \newline
+    Fortran,
+    MPI/OpenMP,
+    UML.
+    % Prolog (CHIP).
+    % Pascal,
+    % Perl.
+}
+{Tools}{
+    \textbf{Git},
+    % SVN,
+    % Eclipse,
+    % Jira,
+    Jenkins,
+    Gitlab CI
+    \newline
+    Gradle
+    % maven,
+    % Ant.
+    Configure/make,
+    Makefile.
+}
+\cvcomputer{Web -- SGBD}{
+    HTML/CSS,
+    javascript,
+    PHP,
+    \newline
+    MySQL,
+    PostgrSQL.}
+{OS et logiciels}{
+    GNU Linux,
+    Mac OSX,
+    Windows,
+    \newline
+    % Matlab,
+    % ExtendSim,
+    \LaTeX,
+    MS Office.
+}
+
+
+% \subsection{Mathé% \cvcomputer{Recherche opérationnelle}{
+%     \begin{itemize}
+%         \item \textbf{Optimisation}
+%         \item \textbf{Algorithmique avancée et parallélisation}
+%         \item Programmation logique par contrainte
+%         \item Probabilités et statistiques
+%         % \item Processus de Markov
+%         % \item Optimisation combinatoire et convexe
+%         % \item Optimisation dans les réseaux
+%         \item Théorie du signal
+%         % \item Contrôle optimal
+%         % \item Automatique
+%     \end{itemize}
+% }
+% {Calcul scientifique}{
+%     \begin{itemize}
+%         \item Calcul différentiel
+%         \item Éléments finis
+%         \item Méthode des éléments finis
+%         % \item Calcul spectral
+%         % \item Équations aux dérivées partielles
+%         \item Analyse numérique
+%         \item Algorithmique numérique et arithmétique
+%     \end{itemize}
+% }
+
+\section{Projetos extra-profissionais}
+\cvline{2018 -- 2019}
+    {Desenvolvimento Java do aplicativo Android \href{https://gitlab.com/MisterFruits/TextLaunch}{($\hookrightarrow$ TextLaunch)}, \textbf{integração continua} com Gitlab.}
+\cvline{2012 -- 2013}
+    {Concepção de rede hierárquicas : \textbf{programação inteira} com CPLEX Python (IBM). Aplicação da teoria dos grafos com Porta.}
+% \cvline{2012}
+%     {Étude de la parallélisation d'un algorithme d'\textbf{optimisation par essaim} (PSO).}
+% \cvline{2011}
+%     {Concepção et programação de um jogo de Go com \textbf{UML e Java} seguindo o padrão \textbf{MVC}.}
+% \cvline{2011}
+%     {Programmation orienté objet d'un ensemble de jeux de cartes en C++. Travail en groupe à l'aide de SVN.}
+% \cvline{2011}
+%     {\textbf{Segmentation d'image}, algorithmes de partitionnement de graphe : Kernighan et Lin, Karger et Stoer-Wagner.}
+% \cvline{2009}
+%     {\textbf{Modélisation} de la propagation d'un virus dans une population avec Scilab.}
+
+
+\section{Education}
+\cventry{2008 -- 2013}
+    {Master of Engineering}
+    {National Institut of Applied Sciences (INSA)}
+    {Rouen, France}{}
+    {Specialization: computational and applied Mathematics}
+
+
+% \section{Linguas}
+% \cvlanguage{Português}{Fluente.}
+%     {Francês}{Falante nativo.}
+% \cvlanguage{Inglês}{Fluente (TOEIC 935/990).}
+%     {Espanhol}{Compreensão escrita e oral.}
+
+% \section{Interesses}
+% \cvline{Viagem}
+%     {Um ano (2018-2019) com objectivo de aprender o \textbf{Português do Brasil} e a pratica intensiva da escalada e do surf.}
+% % \cvline{Sport}{
+% % Pratique de l'escalade% en falaise et en salle
+% % , du surf
+% % , de l'Aïkido (1er dan et enseignement à des enfants)%
+% % , régates de voile en équipage.%(participation à la course croisière EDHEC en 2012)
+% % et de la capoeira.
+% % }{}
+% \cvline{Expressão corporal}{
+% %Deux années de
+% Malabarismo, circo et teatro de improvisação.
+% %Apprentissage et enseignement du
+% %Jonglage dans le club associatif de l'INSA Rouen (76).
+% }{}
+
+\end{document}
