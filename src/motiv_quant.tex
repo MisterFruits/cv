@@ -1,28 +1,83 @@
-Dear head of QuantStack, Sylvain Corlay,
+\documentclass[10pt,a4paper]{lettre}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+%\usepackage{lmodern}
+% \usepackage[frenchb]{babel}
+
+\usepackage{nopageno} % suppress page numbers
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% LE FORMAT DE LA PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\geometry
+%   {%
+%   paper=a4paper,%
+%   margin=3cm,%
+%   hoffset=0cm,%
+   %headsep=0.5cm,%
+%   }%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EN-TÊTES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% OPTIONS DES TABLEAUX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\tabcolsep}{1pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% OPTIONS DIVERSES : math, soulignement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parindent=18ex
+
+%\usepackage[margin={0.6in,0.5in}]{geometry}
+% \addtolength{\textheight}{4cm}
+%\AtBeginDocument{\recomputelengths}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\oddsidemargin}{-2cm}
+
+
+\begin{document}
+
+\begin{letter}{QuantStack Paris\\27 Rue du Chemin Vert\\75011 PARIS\\France}
+\name{Victor Cameo Ponz}
+\address{Victor Cameo Ponz\\3 rue Tour Gayraud\\34 070 Montpellier}
+\email{vicameo@free.fr}
+\telephone{+33 (0)6.74.08.96.90}
+\lieu{Montpellier}
+\nofax
+
+\conc{Application to Software Engineer - Python\&C++ / Package management}
+\opening{Dear head of QuantStack, Sylvain Corlay,}
+
+\parindent=6ex
 
 Your advertisement for a Software Engineer in Python\&C++ and Package
 management position has captured my interest. I believe I would be an excellent
-fit for this job with regard of my experience as software developer and in the
+fit for this job with regard to my experience as a software developer and in the
 scientific computing field. Some key skills you will find relevant include:
 
- - proficient in developing Python code as well as manipulating C++ code from my
+\begin{itemize}
+    \item proficient in developing Python code as well as manipulating C++ code from my
 current position.
- - used to working with git and commonly implemented workflows (issue/merge
+    \item used to working with git and commonly implemented workflows (issue/merge
 request/CI)
- - committed in automating most recurrent processes with Continuous Integration
+    \item committed to automating most recurrent processes with Continuous Integration
 tools
- - comfortable with scientific computing, from my current position and education
- - as an engineer from the support team, I'm used to detail user requests and
+    \item comfortable with scientific computing, from my current position and education
+    \item as an engineer from the support team, I'm used to detail user requests and
 elaborate related solution.
+\end{itemize}
 
 
 In my current position at CINES, I am involved in the installation and deployment
-of hundreds of softwares on the tier 1 HPC cluster Occigen. I am working with
-variety of build tools and I am involved in the automation and industrialisation
-of whole process.
+of hundreds of software on the tier 1 HPC cluster Occigen. I am working with
+a variety of build tools and I am involved in the automation and industrialization
+of the whole process.
 
 I strongly believe in public sciences and free software through wide resources and
-knowledge sharing. I have a limited experience in the field of OpenSource and I
+knowledge sharing. I have limited experience in the field of OpenSource and I
 would be glad to improve it. Still, my understanding of this world is quite good
 and I am used to submitting bug reports and feature requests using Github and Gitlab.
 You can find an example of a contribution of mine to the code of EasyBuild, a
@@ -33,13 +88,16 @@ referenced HPC package manager written with python:
 I'm looking for a dynamic team working with modern IT technology and
 methodologies where my passionate and pragmatic personality could bloom.
 
-I would welcome the opportunity to meet you for in in-depth interview to discuss
+I would welcome the opportunity to meet you for an in-depth interview to discuss
 how we could work together.
 
-Thank you for your time and consideration,
+\closing{Thank you for your time and consideration, sincerely,}
+%\encl{Curiculum Vitae}
+\end{letter}
 
-Sincerely
-Victor Cameo Ponz
+\end{document}
+
+
 
 
 
