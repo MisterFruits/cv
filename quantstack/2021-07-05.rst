@@ -1,36 +1,58 @@
-vcp j'ai postulé à l'offre software ingénieur C++/Python et du package management
-
-échange par mail mais pas convenu de rdv au final. Je vous appelle pour savoir si vous êtes vous êtes toujours à la recherche de qqun. 
-
-Quel délais ? point bloquant de votre coté dans l'embauche ?
-
-victor cameo applied to software ing C++/Python and package manageen
-
-we exchanged some mail but didn't marked a conf call. Are you still looking someone for this position ?
-
-Deadline ? 
-
-
 Entretien du 5 juillet
-=====================
+======================
+
+A propos du poste ?
+*******************
+
+QS créée en 2016 seul Sylvain Corlay
+A la base pour continuer a travailler avec un client américain 
+Toute l'UE com en anglais
+98% open sources vends à des boites
+conda forge
+
+
+Quels sont les projets en cours ?
+Qu'est que c'est concrètement le poste: quelle équipe ? quels outils ? Exemple de journée typique
+Qu'est-ce qu'on attend de moi ?
+QUantStack c'est quoi les objectif de la boite ?
+Echéance d'embauche ?
 
 Point technique
 ***************
 
+Pyhton: Dev scripting + librairies au CINES et à airbus
+C++ optimisation de code = profiling puis modification de certaines fonctions cibles. moins l'habitude de maintenir et dev des gros projets mais la syntaxe m'est familière (typing)
 
+Support = mon métier à 50% au CINES. Contact avec les utilisateurs implémentation des demandes. Traductions des besoins et amélioration du processus de l'équipe
+
+Open source, expériences = remonté de bug/issue/demande de nouvelles fonctionnalité/ 1 MR sur EasyBuild et une sur virtualenvpython). Je pense que ce qui est important c'est le processus issue->MR->revue->intégration tronc commun. Process que je vois au CINES et que j'ai vu à Airbus
 
 Motivation à changer d'entreprise 
 *********************************
 
 **Ce que je recherche c'est**
 
-- un environement motivant: une culture du developpement informatique a travers des outils et une gestion de projet adapté à de la productivité dans le developpechercherLa majorité des employé du CINES et à fortiori des personnes qui prennent les décisions ont une culture de l'informatique et de la gestion de projet qui manque d'agilité
+- un environement motivant: une culture du developpement (outils et une gestion de projet adapté) permettant productivité
+- environement technique pousasnt à l'apprentissage (cotyer des experts technique et management) qui va faire évoluer ma façon de penser...
+- la modalité du télétravail pendant le COVID est qqch qui a fait echo en moi (partager la vie de coloc, pouvoir bouger et travailler de partout, ne pas lier mon travail à un endroit particulier), vraiment une manière de faire adapté à la vie que je souhaite mener
+
+La majorité des employé du CINES et à fortiori des personnes qui prennent les décisions ont une culture de l'informatique et de la gestion de projet qui manque d'agilité et des pratique de l'informatique qui ont du mal à évoluer.
+Le télétravail va être une chose rare (1j/semaine)
 
 Cultrure d'entreprise
 *********************
 
-
-Mon expérience du télétravail est pour le moment assez limité: 
+Mon expérience du télétravail: 
 - j'ai voyagé au long court au Brésil et j'ai pu travaillé en voyageant sur des projets personnel informatiques
 - depuis mon embauche au CINES (6 mois) 
-Gestion du télétravail ? Comptabilisation du temps de travail ? 
+Gestion du télétravail ? Quels outils (visio, mattermost) ? IRL meetings ? 
+Vous avez dit que vou travailliez en décalé avec les US / rapport à la france -> j'imagine que ça implique une flexibilité sur les horaires ? COmment les employés gèrent leur temps de travail/planning ?
+
+Paie:
+ pour moi dépends de beaucoup de facteurs, nb de jour de congés, possibilité d'un temps partiel. Je n'ai pas un rythme de vie ou je dépense beaucoup d'argent (voyages et équiment sportifs, pas d'enfants). Je ne suis pas forcément convaincu par le fait d'amasser beaucoup d'argent pendant un moment puis arrêter de travailler un an ou deux et chercher de nouveau du travail (ce que j'ai fait en 2019). Ce que je cherche plutôt à trouver un équilibre, (j'ai fait une demande de temps partiel à mon travail actuel - quel est le positionnement de quantstack à ce propos ?). Travailler moins ne signifie pas s'investir moins, au contraire ça permet une qualité de vie qui amène une meilleur productivité (repos, motivation -> efficacité, engagement sur le long terme avec une meilleure stabilité) dans l'idéal je prendrai un temps partiel mais je sais que ce n'est pas commun et je suis prêt à négocier ce point.
+
+ chiffre:
+  2500 net à 65 de congés (+RTT) par ans
+  à 25j de congés/ans (ce que je ne soufaite pas) (2500/((52-13)*5))*((52-5)*5) =  3000 net
+  2000 à 80% 52j de congés
+  1500 à 60% 39j
